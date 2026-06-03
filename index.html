@@ -6,8 +6,12 @@
   <meta name="theme-color" content="#faf9f5" />
   <title>RCOL — Colombia DAO · The People's Coin</title>
   <meta name="description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo colombiano." />
-  <meta name="keywords" content="RCOL, Colombia, DAO, memecoin, crypto, World Chain, DeFi" />
+  <meta name="keywords" content="RCOL, Colombia, DAO, memecoin, crypto, World Chain, DeFi, Polygon, SushiSwap" />
+  <meta name="author" content="RCOL Colombia DAO" />
+  <link rel="canonical" href="https://dhxc420.github.io/Rcol.fun/" />
 
+  <meta property="og:site_name" content="RCOL — Colombia DAO" />
+  <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="RCOL — Colombia DAO · The People's Coin" />
   <meta property="og:description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro." />
   <meta property="og:type" content="website" />
@@ -29,6 +33,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dhxc420.github.io/Rcol.fun/#organization",
+        "name": "RCOL — Colombia DAO",
+        "alternateName": "RCOL",
+        "url": "https://dhxc420.github.io/Rcol.fun/",
+        "logo": "https://dhxc420.github.io/Rcol.fun/assets/rcol-logo.png",
+        "description": "RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo colombiano.",
+        "sameAs": [
+          "https://twitter.com/RCol_Oficial",
+          "https://t.me/updatesDzc",
+          "https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a",
+          "https://polygonscan.com/token/0x6202ba7456D98832105c9ef83887D559e9836A62"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dhxc420.github.io/Rcol.fun/#website",
+        "url": "https://dhxc420.github.io/Rcol.fun/",
+        "name": "RCOL — Colombia DAO · The People's Coin",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://dhxc420.github.io/Rcol.fun/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ============ SVG SYMBOLS ============ -->
@@ -157,9 +193,18 @@
         <svg class="butterfly butterfly-5" viewBox="0 0 100 80" aria-hidden="true">
           <use href="#butterfly-shape" />
         </svg>
+
+        <!-- Andes silhouette (subtle depth + parallax) -->
+        <svg class="andes" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <path class="andes-back" data-parallax="0.06"
+            d="M0,170 L120,95 L240,150 L360,80 L480,140 L600,70 L720,135 L840,90 L960,145 L1080,80 L1200,135 L1320,95 L1440,150 L1440,220 L0,220 Z" />
+          <path class="andes-front" data-parallax="0.14"
+            d="M0,220 L160,120 L300,180 L440,105 L600,175 L760,100 L900,170 L1060,120 L1220,185 L1380,125 L1440,165 L1440,220 L0,220 Z" />
+        </svg>
       </div>
 
       <div class="container hero-inner">
+        <h1 class="sr-only">RCOL — Colombia DAO · The People's Coin de Colombia en World Chain</h1>
         <div class="hero-banner">
           <img src="assets/rcol-banner.jpg"
                alt="RCOL — Nuestra identidad, nuestro respaldo. Comunidad, Transparencia, Descentralización."

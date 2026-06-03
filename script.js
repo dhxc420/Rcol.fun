@@ -106,4 +106,62 @@
       })
     );
   }
+
+  // ---------- Subtle parallax + scroll reveal ----------
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!reduceMotion) {
+    // Light parallax on the Andes silhouette layers
+    const parallaxEls = Array.from(document.querySelectorAll("[data-parallax]"));
+    if (parallaxEls.length) {
+      let ticking = false;
+      const applyParallax = () => {
+        const y = window.scrollY || window.pageYOffset || 0;
+        for (const el of parallaxEls) {
+          const speed = parseFloat(el.getAttribute("data-parallax")) || 0;
+          el.style.transform = "translate3d(0," + (y * speed).toFixed(1) + "px,0)";
+        }
+        ticking = false;
+      };
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(applyParallax);
+          }
+        },
+        { passive: true }
+      );
+      applyParallax();
+    }
+
+    // Scroll reveal (fade-up) via IntersectionObserver
+    if ("IntersectionObserver" in window) {
+      document.documentElement.classList.add("reveal-ready");
+      const revealEls = document.querySelectorAll(
+        ".section-head, .feature, .token-card, .htb-step, .social-card, " +
+          ".stat-card, .polygon-card, .chart-wrap, .distribution, " +
+          ".htb-cta, .flag-banner"
+      );
+      revealEls.forEach((el, i) => {
+        el.classList.add("is-reveal");
+        el.style.transitionDelay = (i % 4) * 60 + "ms"; // subtle row stagger
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
 })();
