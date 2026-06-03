@@ -28,6 +28,32 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ============ SVG SYMBOLS ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="butterfly-shape" viewBox="0 0 100 80">
+        <!-- Body -->
+        <ellipse cx="50" cy="40" rx="1.6" ry="14" fill="currentColor" opacity="0.9"/>
+        <!-- Antennae -->
+        <path d="M50 26 Q47 18 44 14" stroke="currentColor" stroke-width="1" fill="none" opacity="0.75"/>
+        <path d="M50 26 Q53 18 56 14" stroke="currentColor" stroke-width="1" fill="none" opacity="0.75"/>
+        <circle cx="44" cy="14" r="1.3" fill="currentColor"/>
+        <circle cx="56" cy="14" r="1.3" fill="currentColor"/>
+        <!-- Left upper wing -->
+        <path d="M48 32 Q22 14 8 26 Q2 38 18 42 Q34 44 48 38 Z" fill="currentColor" opacity="0.85"/>
+        <!-- Right upper wing -->
+        <path d="M52 32 Q78 14 92 26 Q98 38 82 42 Q66 44 52 38 Z" fill="currentColor" opacity="0.85"/>
+        <!-- Left lower wing -->
+        <path d="M48 44 Q30 50 22 64 Q28 72 40 66 Q48 58 48 50 Z" fill="currentColor" opacity="0.75"/>
+        <!-- Right lower wing -->
+        <path d="M52 44 Q70 50 78 64 Q72 72 60 66 Q52 58 52 50 Z" fill="currentColor" opacity="0.75"/>
+        <!-- Wing spots -->
+        <circle cx="22" cy="30" r="2.5" fill="#fff" opacity="0.55"/>
+        <circle cx="78" cy="30" r="2.5" fill="#fff" opacity="0.55"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container header-inner">
@@ -38,7 +64,9 @@
 
       <nav class="nav-desktop" aria-label="Principal">
         <a href="#about">Sobre</a>
+        <a href="#polygon">Polygon</a>
         <a href="#tokenomics">Tokenomics</a>
+        <a href="#how-to-buy">Cómo Comprar</a>
         <a href="#chart">Chart</a>
         <a href="#community">Comunidad</a>
       </nav>
@@ -62,7 +90,9 @@
 
     <nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
       <a href="#about">Sobre</a>
+      <a href="#polygon">Polygon</a>
       <a href="#tokenomics">Tokenomics</a>
+      <a href="#how-to-buy">Cómo Comprar</a>
       <a href="#chart">Chart</a>
       <a href="#community">Comunidad</a>
     </nav>
@@ -75,6 +105,23 @@
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
+
+        <!-- Floating butterflies -->
+        <svg class="butterfly butterfly-1" viewBox="0 0 100 80" aria-hidden="true">
+          <use href="#butterfly-shape" />
+        </svg>
+        <svg class="butterfly butterfly-2" viewBox="0 0 100 80" aria-hidden="true">
+          <use href="#butterfly-shape" />
+        </svg>
+        <svg class="butterfly butterfly-3" viewBox="0 0 100 80" aria-hidden="true">
+          <use href="#butterfly-shape" />
+        </svg>
+        <svg class="butterfly butterfly-4" viewBox="0 0 100 80" aria-hidden="true">
+          <use href="#butterfly-shape" />
+        </svg>
+        <svg class="butterfly butterfly-5" viewBox="0 0 100 80" aria-hidden="true">
+          <use href="#butterfly-shape" />
+        </svg>
       </div>
 
       <div class="container hero-inner">
@@ -82,7 +129,12 @@
           <img src="assets/rcol-logo.png" alt="RCOL Coin" class="coin-img" width="280" height="280" />
         </div>
 
-        <h1 class="hero-title">RCOL</h1>
+        <p class="hero-tag">THE PEOPLE'S COIN — WORLD CHAIN</p>
+
+        <h1 class="hero-title" data-text="RCOL">
+          <span class="hero-title-fill">RCOL</span>
+          <span class="hero-title-stripes" aria-hidden="true">RCOL</span>
+        </h1>
 
         <p class="hero-subtitle">
           <strong>Colombia DAO</strong>
@@ -185,6 +237,86 @@
       </div>
     </section>
 
+    <!-- ============ POLYGON ============ -->
+    <section id="polygon" class="polygon">
+      <!-- Decorative butterflies -->
+      <svg class="butterfly butterfly-pg-1" viewBox="0 0 100 80" aria-hidden="true"><use href="#butterfly-shape"/></svg>
+      <svg class="butterfly butterfly-pg-2" viewBox="0 0 100 80" aria-hidden="true"><use href="#butterfly-shape"/></svg>
+
+      <div class="container">
+        <header class="polygon-eyebrow">
+          <span class="polygon-dot"></span>
+          <span class="eyebrow-text">RCOL ON POLYGON</span>
+        </header>
+
+        <div class="polygon-grid">
+          <article class="polygon-card">
+            <h3 class="polygon-title">Polygon Network Details</h3>
+            <dl class="polygon-list">
+              <div class="polygon-row">
+                <dt>Network</dt>
+                <dd>Polygon (POL)</dd>
+              </div>
+              <div class="polygon-row">
+                <dt>Token Standard</dt>
+                <dd>ERC-20</dd>
+              </div>
+              <div class="polygon-row">
+                <dt>Total Supply</dt>
+                <dd>420,690,000,000,000 RCOL</dd>
+              </div>
+              <div class="polygon-row">
+                <dt>DEX</dt>
+                <dd>SushiSwap V2</dd>
+              </div>
+              <div class="polygon-row">
+                <dt>Tax</dt>
+                <dd>0% Buy / 0% Sell</dd>
+              </div>
+            </dl>
+
+            <div class="polygon-ca">
+              <span class="polygon-ca-label">Contract Address</span>
+              <button class="ca-button ca-polygon" data-address="0x6202ba7456D98832105c9ef83887D559e9836A62" type="button" aria-label="Copiar contract address de Polygon">
+                <span class="ca-polygon-text">0x6202ba7456D98832105c9ef83887D559e9836A62</span>
+                <span class="ca-copy-text">COPY</span>
+                <span class="ca-copied-text">COPIED</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="polygon-card">
+            <h3 class="polygon-title">Trade &amp; Explore</h3>
+            <p class="polygon-desc">
+              RCOL is deployed on Polygon, giving holders access to fast, low-fee
+              trades via SushiSwap. The same token supply — now bridging the
+              Polygon ecosystem.
+            </p>
+
+            <div class="polygon-actions">
+              <a class="btn-polygon btn-polygon-primary"
+                 href="https://polygonscan.com/token/0x6202ba7456D98832105c9ef83887D559e9836A62"
+                 target="_blank" rel="noopener noreferrer">
+                <span>VIEW ON POLYGONSCAN</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a class="btn-polygon btn-polygon-sushi"
+                 href="https://www.sushi.com/polygon/swap?token0=NATIVE&token1=0x6202ba7456D98832105c9ef83887D559e9836A62"
+                 target="_blank" rel="noopener noreferrer">
+                <span>TRADE ON SUSHISWAP</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </a>
+              <div class="btn-polygon btn-polygon-tags">
+                <span>POLYGON</span><span class="dot-sep">·</span>
+                <span>FAST FEES</span><span class="dot-sep">·</span>
+                <span>SUSHISWAP V2</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ TOKENOMICS ============ -->
     <section id="tokenomics" class="tokenomics">
       <div class="container">
@@ -232,6 +364,64 @@
               <span>Sin Wallet de Team</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW TO BUY ============ -->
+    <section id="how-to-buy" class="how-to-buy">
+      <svg class="butterfly butterfly-htb-1" viewBox="0 0 100 80" aria-hidden="true"><use href="#butterfly-shape"/></svg>
+      <svg class="butterfly butterfly-htb-2" viewBox="0 0 100 80" aria-hidden="true"><use href="#butterfly-shape"/></svg>
+
+      <div class="container">
+        <header class="htb-head">
+          <span class="htb-eyebrow">HOW TO BUY</span>
+          <h2 class="htb-title">
+            <span class="htb-line-1">GET YOUR</span>
+            <span class="htb-line-2">RCOL IN <span class="htb-accent">4 STEPS</span></span>
+          </h2>
+        </header>
+
+        <div class="htb-grid">
+          <article class="htb-step">
+            <span class="htb-num">01</span>
+            <div class="htb-body">
+              <h3>DOWNLOAD WORLD APP</h3>
+              <p>Descarga la World App en tu dispositivo. Completa la verificación de identidad para desbloquear todas las funciones.</p>
+            </div>
+          </article>
+
+          <article class="htb-step">
+            <span class="htb-num">02</span>
+            <div class="htb-body">
+              <h3>FUND YOUR WALLET</h3>
+              <p>Compra WLD o ETH en cualquier exchange y transfiérelo a tu wallet de World App.</p>
+            </div>
+          </article>
+
+          <article class="htb-step">
+            <span class="htb-num">03</span>
+            <div class="htb-body">
+              <h3>BUY RCOL ON WORLD</h3>
+              <p>Abre la mini-app de RCOL en World, pega el contract address y haz el swap por tokens RCOL.</p>
+            </div>
+          </article>
+
+          <article class="htb-step">
+            <span class="htb-num">04</span>
+            <div class="htb-body">
+              <h3>HOLD &amp; WIN</h3>
+              <p>Bienvenido a la familia. Diamond hands get rewarded. Mira crecer la comunidad.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="htb-cta">
+          <a class="btn-htb"
+             href="https://world.org/mini-app?app_id=app_e5ba7c3061400e361f98ce44d8b1b9c4&path=/token/0x82bf7aa0680d9c2d6ffa77b995e2092fe68d308a"
+             target="_blank" rel="noopener noreferrer">
+            BUY ON WORLD APP
+          </a>
         </div>
       </div>
     </section>
@@ -327,7 +517,9 @@
 
       <nav class="footer-nav" aria-label="Pie">
         <a href="#about">Sobre</a>
+        <a href="#polygon">Polygon</a>
         <a href="#tokenomics">Tokenomics</a>
+        <a href="#how-to-buy">Cómo Comprar</a>
         <a href="#chart">Chart</a>
         <a href="#community">Comunidad</a>
       </nav>

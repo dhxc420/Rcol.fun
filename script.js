@@ -1,16 +1,16 @@
 (() => {
-  const CONTRACT_ADDRESS = "0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a";
+  const WORLD_CHAIN_ADDRESS = "0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a";
 
-  // Copy contract address — works for both header and footer buttons
+  // Copy contract address — each button reads data-address (or falls back to World Chain)
   const copyButtons = document.querySelectorAll(".ca-button");
   copyButtons.forEach((btn) => {
     btn.addEventListener("click", async () => {
+      const addr = btn.dataset.address || WORLD_CHAIN_ADDRESS;
       try {
-        await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+        await navigator.clipboard.writeText(addr);
       } catch {
-        // Fallback for older browsers / file:// origins
         const ta = document.createElement("textarea");
-        ta.value = CONTRACT_ADDRESS;
+        ta.value = addr;
         ta.style.position = "fixed";
         ta.style.opacity = "0";
         document.body.appendChild(ta);
