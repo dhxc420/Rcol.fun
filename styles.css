@@ -34,7 +34,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--background);
   color: var(--foreground);
@@ -52,6 +52,23 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; width: 100%; }
 .icon { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+
+/* Inline Colombia flag (consistent across all platforms incl. Windows) */
+.co-flag {
+  display: inline-block;
+  width: 1.35em;
+  height: 0.95em;
+  vertical-align: -0.12em;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    180deg,
+    var(--flag-yellow) 0 50%,
+    var(--flag-blue) 50% 75%,
+    var(--flag-red) 75% 100%
+  );
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
 
 /* ============ HEADER ============ */
 .site-header {
@@ -104,6 +121,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .nav-desktop a {
   color: rgba(26, 26, 26, 0.7);
   font-weight: 500;
+  white-space: nowrap;
   transition: color 0.2s;
 }
 .nav-desktop a:hover { color: var(--primary); }
@@ -165,6 +183,57 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .nav-mobile a:hover { color: var(--primary); background: var(--muted); }
 .nav-mobile.open { display: flex; }
 
+/* ============ LIVE TICKER ============ */
+.ticker {
+  overflow: hidden;
+  background: linear-gradient(90deg, #14e07a 0%, #1fbf75 50%, #14e07a 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 14px rgba(31, 191, 117, 0.3);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerScroll 38s linear infinite;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+
+.ticker-group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.tk-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #06210f;
+  text-transform: uppercase;
+}
+.tk-item::after {
+  content: "◆";
+  margin: 0 1.5rem;
+  font-size: 0.6rem;
+  color: rgba(6, 33, 15, 0.5);
+}
+.tk-item b { font-weight: 800; color: #042a14; }
+.tk-change.tk-down { color: #b81414; }
+.tk-change.tk-up { color: #044d24; }
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* ============ HERO ============ */
 .hero {
   position: relative;
@@ -172,7 +241,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 7.5rem;
   overflow: hidden;
   background: linear-gradient(180deg, var(--background) 0%, var(--background) 60%, rgba(240, 235, 224, 0.3) 100%);
 }
@@ -1109,8 +1178,8 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 @media (min-width: 768px) {
-  .header-inner { padding: 0.85rem 2rem; }
-  .nav-desktop { display: flex; gap: 1.5rem; }
+  .header-inner { padding: 0.85rem 1.5rem; gap: 1rem; }
+  .nav-desktop { display: flex; gap: 1rem; font-size: 0.92rem; }
   .nav-toggle { display: none; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .token-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1121,11 +1190,12 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 @media (min-width: 1024px) {
   .feature-grid { grid-template-columns: repeat(4, 1fr); }
+  .nav-desktop { gap: 1.75rem; font-size: 1rem; }
 }
 
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .hero-coin, .scroll-indicator, .butterfly, .hero-title,
-  .hero-title-stripes, .hero-tag, .htb-accent { animation: none !important; }
+  .hero-title-stripes, .hero-tag, .htb-accent, .ticker-track { animation: none !important; }
   * { transition-duration: 0.01ms !important; }
 }
