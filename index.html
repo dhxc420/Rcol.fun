@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#faf9f5" />
+  <title>RCOL — Colombia DAO · The People's Coin</title>
+  <meta name="description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo colombiano." />
+  <meta name="keywords" content="RCOL, Colombia, DAO, memecoin, crypto, World Chain, DeFi" />
+
+  <meta property="og:title" content="RCOL — Colombia DAO · The People's Coin" />
+  <meta property="og:description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/rcol-logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RCOL — Colombia DAO" />
+  <meta name="twitter:description" content="The People's Coin 🇨🇴" />
+  <meta name="twitter:image" content="assets/rcol-logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <img src="assets/rcol-logo.png" alt="RCOL Logo" class="brand-logo" width="44" height="44" />
+        <span class="brand-name">RCOL</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Principal">
+        <a href="#about">Sobre</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#chart">Chart</a>
+        <a href="#community">Comunidad</a>
+      </nav>
+
+      <button class="ca-button" id="ca-button-header" type="button" aria-label="Copiar contract address">
+        <span class="ca-label">CA:</span>
+        <span class="ca-short" id="ca-short-header">0x82bF...308a</span>
+        <svg class="icon icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+        </svg>
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
+      <a href="#about">Sobre</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#chart">Chart</a>
+      <a href="#community">Comunidad</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-coin">
+          <img src="assets/rcol-logo.png" alt="RCOL Coin" class="coin-img" width="280" height="280" />
+        </div>
+
+        <h1 class="hero-title">RCOL</h1>
+
+        <p class="hero-subtitle">
+          <strong>Colombia DAO</strong>
+          <span class="sep">·</span>
+          <span>The People's Coin</span>
+          <span class="flag">🇨🇴</span>
+        </p>
+
+        <p class="hero-desc">
+          El primer memecoin de Colombia en World Chain.
+          Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary"
+             href="https://world.org/mini-app?app_id=app_e5ba7c3061400e361f98ce44d8b1b9c4&path=/token/0x82bf7aa0680d9c2d6ffa77b995e2092fe68d308a"
+             target="_blank" rel="noopener noreferrer">
+            Comprar en PUF
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a class="btn btn-uniswap"
+             href="https://app.uniswap.org/swap?outputCurrency=0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a&chain=worldchain"
+             target="_blank" rel="noopener noreferrer">
+            Comprar en Uniswap
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <a href="#chart" class="btn btn-ghost">Ver Chart</a>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <p class="stat-num">100M</p>
+            <p class="stat-label">Total Supply</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-num">0%</p>
+            <p class="stat-label">Tax</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-emoji">🔥</p>
+            <p class="stat-label">LP Burned</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-check">✓</p>
+            <p class="stat-label">Renounced</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Bajar">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">¿Qué es RCOL?</h2>
+          <p class="section-sub">
+            RCOL es más que un memecoin — es un movimiento. Representamos la unión del pueblo colombiano
+            en el mundo cripto, construyendo comunidad y oportunidades para todos.
+          </p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Comunidad</h3>
+            <p>Somos una comunidad unida de colombianos y latinos apasionados por las criptomonedas.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>World Chain</h3>
+            <p>Construido en World Chain para transacciones rápidas, seguras y con bajas comisiones.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Seguridad</h3>
+            <p>Contrato renunciado y liquidez quemada. 100% seguro para la comunidad.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Global</h3>
+            <p>Nacimos en Colombia pero nuestra visión es global. ¡Únete a la revolución!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TOKENOMICS ============ -->
+    <section id="tokenomics" class="tokenomics">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Tokenomics</h2>
+          <p class="section-sub">Simple, transparente y justo. Así es RCOL.</p>
+        </header>
+
+        <div class="token-grid">
+          <article class="token-card">
+            <div class="token-bar"></div>
+            <div class="token-num">100M</div>
+            <div class="token-label">Total Supply</div>
+            <p class="token-desc">100,000,000 tokens en circulación</p>
+          </article>
+
+          <article class="token-card">
+            <div class="token-bar token-bar-2"></div>
+            <div class="token-num">0%</div>
+            <div class="token-label">Impuesto</div>
+            <p class="token-desc">Sin tax en compras ni ventas</p>
+          </article>
+
+          <article class="token-card">
+            <div class="token-bar token-bar-3"></div>
+            <div class="token-num token-emoji">🔥</div>
+            <div class="token-label">LP Burned</div>
+            <p class="token-desc">Liquidez quemada permanentemente</p>
+          </article>
+        </div>
+
+        <div class="distribution">
+          <h3>Distribución</h3>
+          <div class="dist-bar-wrap">
+            <div class="dist-bar"><div class="dist-fill"></div></div>
+            <span class="dist-label">100% LP</span>
+          </div>
+          <div class="dist-checks">
+            <div class="dist-check">
+              <span class="dot"></span>
+              <span>Contrato Renunciado</span>
+            </div>
+            <div class="dist-check">
+              <span class="dot"></span>
+              <span>Sin Wallet de Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHART ============ -->
+    <section id="chart" class="chart-section">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">RCOL / World Chain</h2>
+          <p class="section-sub">Chart en tiempo real — DexScreener</p>
+        </header>
+
+        <div class="chart-wrap">
+          <iframe
+            src="https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a?embed=1&theme=dark&info=0"
+            title="RCOL DexScreener Chart"
+            loading="lazy"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="chart-link">
+          <a href="https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a"
+             target="_blank" rel="noopener noreferrer">
+            Ver en DexScreener
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITY ============ -->
+    <section id="community" class="community">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Únete a la Comunidad</h2>
+          <p class="section-sub">
+            Conéctate con nosotros en redes sociales y sé parte del movimiento RCOL.
+          </p>
+        </header>
+
+        <div class="social-grid">
+          <a class="social-card" href="https://twitter.com/rcol_dao" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Twitter</span>
+            <svg class="icon ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a class="social-card" href="https://t.me/rcol_dao" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            <span>Telegram</span>
+            <svg class="icon ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a class="social-card" href="https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <span>DexScreener</span>
+            <svg class="icon ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="flag-banner">
+          <div class="flag-y"></div>
+          <div class="flag-b"></div>
+          <div class="flag-r"></div>
+        </div>
+
+        <p class="community-foot">Hecho con ❤️ por colombianos, para el mundo</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/rcol-logo.png" alt="RCOL Logo" width="48" height="48" />
+        <span>RCOL</span>
+      </div>
+
+      <div class="footer-ca">
+        <span class="footer-ca-label">Contract Address</span>
+        <button class="ca-button ca-full" id="ca-button-footer" type="button" aria-label="Copiar contract address">
+          <span class="ca-full-text" id="ca-full-text">0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a</span>
+          <svg class="icon icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          </svg>
+          <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="footer-nav" aria-label="Pie">
+        <a href="#about">Sobre</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#chart">Chart</a>
+        <a href="#community">Comunidad</a>
+      </nav>
+
+      <p class="disclaimer">
+        <strong>Disclaimer:</strong> RCOL es un memecoin y no representa consejo financiero.
+        Las criptomonedas son altamente volátiles. Invierte solo lo que puedas permitirte perder.
+        Haz tu propia investigación (DYOR).
+      </p>
+
+      <p class="copy">© 2026 RCOL Colombia DAO. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
