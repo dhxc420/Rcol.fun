@@ -336,6 +336,12 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: 2172 / 724;
+  object-fit: cover;
+}
+/* Mobile swaps to the 3:2 banner via <picture>; match its ratio to avoid layout shift */
+@media (max-width: 640px) {
+  .hero-banner-img { aspect-ratio: 3 / 2; }
 }
 /* Soft moving shine sweep across the banner */
 .hero-banner::after {

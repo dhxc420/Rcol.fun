@@ -206,9 +206,14 @@
       <div class="container hero-inner">
         <h1 class="sr-only">RCOL — Colombia DAO · The People's Coin de Colombia en World Chain</h1>
         <div class="hero-banner">
-          <img src="assets/rcol-banner.jpg"
-               alt="RCOL — Nuestra identidad, nuestro respaldo. Comunidad, Transparencia, Descentralización."
-               width="2172" height="724" class="hero-banner-img" fetchpriority="high" />
+          <picture>
+            <!-- Móvil: versión vertical 3:2 (más legible en pantallas angostas) -->
+            <source media="(max-width: 640px)" srcset="assets/rcol-banner-mobile.jpg" width="1080" height="720" />
+            <!-- Desktop/tablet: banner ancho 3:1 -->
+            <img src="assets/rcol-banner.jpg"
+                 alt="RCOL — Nuestra identidad, nuestro respaldo. Comunidad, Transparencia, Descentralización."
+                 width="2172" height="724" class="hero-banner-img" fetchpriority="high" />
+          </picture>
         </div>
 
         <p class="hero-subtitle">
