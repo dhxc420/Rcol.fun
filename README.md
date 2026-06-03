@@ -18,11 +18,9 @@ Sitio web oficial de **RCOL**, construido como sitio estático (HTML/CSS/JS puro
 .
 ├── index.html       # Página principal
 ├── styles.css       # Estilos
-├── script.js        # Copy CA + menú móvil
-├── assets/          # Logo e iconos
-│   ├── rcol-logo.png
-│   ├── icon.svg
-│   └── apple-icon.png
+├── script.js        # Copy CA + menú móvil + ticker live
+├── assets/          # Logo (también usado como favicon)
+│   └── rcol-logo.png
 ├── .nojekyll        # Evita el procesado Jekyll de GitHub Pages
 └── README.md
 ```
