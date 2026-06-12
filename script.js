@@ -44,6 +44,19 @@
     return "$" + s;
   };
 
+  const fmtNum = (n) => {
+    if (!isFinite(n)) return "—";
+    if (n >= 1e9) return (n / 1e9).toFixed(2) + "B";
+    if (n >= 1e6) return (n / 1e6).toFixed(2) + "M";
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + "K";
+    return String(Math.round(n));
+  };
+
+  const setStat = (id, text) => {
+    const el = document.getElementById(id);
+    if (el && text != null) el.textContent = text;
+  };
+
   const setAll = (cls, text, extraClass) => {
     document.querySelectorAll(cls).forEach((el) => {
       el.textContent = text;
@@ -68,6 +81,7 @@
       );
 
       setAll(".tk-price", fmtPrice(pair.priceUsd));
+      setStat("stat-price", fmtPrice(pair.priceUsd));
 
       const ch = Number(pair.priceChange?.h24 ?? 0);
       const sign = ch > 0 ? "+" : "";
@@ -79,15 +93,61 @@
 
       if (pair.liquidity?.usd != null) setAll(".tk-liq", fmtUsd(pair.liquidity.usd));
       const mc = pair.marketCap ?? pair.fdv;
-      if (mc != null) setAll(".tk-mcap", fmtUsd(mc));
+      if (mc != null) { setAll(".tk-mcap", fmtUsd(mc)); setStat("stat-mcap", fmtUsd(mc)); }
       if (pair.volume?.h24 != null) setAll(".tk-vol", fmtUsd(pair.volume.h24));
     } catch (_) {
       /* keep snapshot values on failure */
     }
   }
 
+  // Holders — vía explorer Blockscout de World Chain
+  async function refreshHolders() {
+    try {
+      const r = await fetch(
+        "https://worldchain-mainnet.explorer.alchemy.com/api/v2/tokens/" + WORLD_CHAIN_ADDRESS,
+        { cache: "no-store" }
+      );
+      if (!r.ok) return;
+      const d = await r.json();
+      const h = Number(d.holders ?? d.holders_count ?? 0);
+      if (h > 0) {
+        const t = h.toLocaleString("en-US");
+        setStat("stat-holders", t);
+        setAll(".tk-holders", t);
+      }
+    } catch (_) {}
+  }
+
+  // Tokens quemados — balanceOf(dead) vía RPC (con failover)
+  const RPCS = ["https://480.rpc.thirdweb.com", "https://worldchain.drpc.org"];
+  async function refreshBurned() {
+    const DEAD = "000000000000000000000000000000000000dead";
+    const data = "0x70a08231" + "000000000000000000000000" + DEAD;
+    for (const url of RPCS) {
+      try {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call",
+            params: [{ to: WORLD_CHAIN_ADDRESS, data }, "latest"] }),
+        });
+        const d = await r.json();
+        if (d && d.result && d.result !== "0x") {
+          const burned = Number(BigInt(d.result) / 1000000000000000000n); // /1e18
+          setStat("stat-burned", fmtNum(burned));
+          setAll(".tk-burned", fmtNum(burned));
+          return;
+        }
+      } catch (_) {}
+    }
+  }
+
   refreshTicker();
-  setInterval(refreshTicker, 60000); // refresh every 60s
+  refreshHolders();
+  refreshBurned();
+  setInterval(refreshTicker, 60000);   // precio/mcap cada 60s
+  setInterval(refreshHolders, 300000); // holders cada 5 min
+  setInterval(refreshBurned, 300000);  // quemados cada 5 min
 
   // Mobile nav toggle
   const navToggle = document.getElementById("nav-toggle");
