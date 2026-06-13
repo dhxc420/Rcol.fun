@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dhxc420.github.io/Rcol.fun/sitemap.xml
+Sitemap: https://rcol-fun.vercel.app/sitemap.xml

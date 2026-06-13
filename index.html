@@ -8,22 +8,22 @@
   <meta name="description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo colombiano." />
   <meta name="keywords" content="RCOL, Colombia, DAO, memecoin, crypto, World Chain, DeFi, Polygon, SushiSwap" />
   <meta name="author" content="RCOL Colombia DAO" />
-  <link rel="canonical" href="https://dhxc420.github.io/Rcol.fun/" />
+  <link rel="canonical" href="https://rcol-fun.vercel.app/" />
 
   <meta property="og:site_name" content="RCOL — Colombia DAO" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="RCOL — Colombia DAO · The People's Coin" />
   <meta property="og:description" content="RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dhxc420.github.io/Rcol.fun/" />
-  <meta property="og:image" content="https://dhxc420.github.io/Rcol.fun/assets/rcol-banner.jpg" />
-  <meta property="og:image:width" content="2172" />
-  <meta property="og:image:height" content="724" />
+  <meta property="og:url" content="https://rcol-fun.vercel.app/" />
+  <meta property="og:image" content="https://rcol-fun.vercel.app/assets/butterfly-hero.jpg" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="1152" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RCOL — Colombia DAO" />
   <meta name="twitter:description" content="The People's Coin 🇨🇴" />
-  <meta name="twitter:image" content="https://dhxc420.github.io/Rcol.fun/assets/rcol-banner.jpg" />
+  <meta name="twitter:image" content="https://rcol-fun.vercel.app/assets/butterfly-hero.jpg" />
 
   <link rel="icon" type="image/png" href="assets/rcol-logo.png" />
   <link rel="apple-touch-icon" href="assets/rcol-logo.png" />
@@ -41,11 +41,11 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://dhxc420.github.io/Rcol.fun/#organization",
+        "@id": "https://rcol-fun.vercel.app/#organization",
         "name": "RCOL — Colombia DAO",
         "alternateName": "RCOL",
-        "url": "https://dhxc420.github.io/Rcol.fun/",
-        "logo": "https://dhxc420.github.io/Rcol.fun/assets/rcol-logo.png",
+        "url": "https://rcol-fun.vercel.app/",
+        "logo": "https://rcol-fun.vercel.app/assets/rcol-logo.png",
         "description": "RCOL es el memecoin de Colombia. Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo colombiano.",
         "sameAs": [
           "https://twitter.com/RCol_Oficial",
@@ -56,11 +56,11 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://dhxc420.github.io/Rcol.fun/#website",
-        "url": "https://dhxc420.github.io/Rcol.fun/",
+        "@id": "https://rcol-fun.vercel.app/#website",
+        "url": "https://rcol-fun.vercel.app/",
         "name": "RCOL — Colombia DAO · The People's Coin",
         "inLanguage": "es",
-        "publisher": { "@id": "https://dhxc420.github.io/Rcol.fun/#organization" }
+        "publisher": { "@id": "https://rcol-fun.vercel.app/#organization" }
       }
     ]
   }
@@ -203,64 +203,83 @@
         </svg>
       </div>
 
+      <!-- Wallpaper full-bleed: mariposa esmeralda 2K -->
+      <picture class="hero-wallpaper" aria-hidden="true">
+        <source media="(min-width: 768px)" srcset="assets/butterfly-hero.jpg" />
+        <img src="assets/butterfly-hero.jpg"
+             onerror="this.onerror=null; this.src='assets/butterfly-hero-fallback.svg';"
+             alt="" fetchpriority="high" />
+      </picture>
+
+      <!-- Overlay degradado para legibilidad del texto -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="container hero-inner">
-        <span class="hero-eyebrow">🦋 República de Colombia · World Chain</span>
+        <div class="hero-content">
+          <span class="hero-eyebrow">
+            <span class="dot-live"></span>
+            República de Colombia · World Chain · Token Graduado
+          </span>
 
-        <div class="hero-art">
-          <span class="hero-art-glow" aria-hidden="true"></span>
-          <img src="assets/butterfly.png"
-               onerror="this.onerror=null; this.src='assets/rcol-logo.png'; this.closest('.hero-art').classList.add('art-coin');"
-               alt="RCOL — mariposa esmeralda, República de Colombia"
-               class="hero-butterfly" fetchpriority="high" />
-        </div>
+          <h1 class="hero-title">
+            RCOL
+            <span class="sr-only"> — Colombia DAO, The People's Coin de Colombia en World Chain</span>
+          </h1>
 
-        <h1 class="hero-title">RCOL<span class="sr-only"> — Colombia DAO, The People's Coin de Colombia en World Chain</span></h1>
+          <p class="hero-tagline">
+            <span class="tagline-accent">Nuestra identidad,</span> nuestro respaldo.
+          </p>
 
-        <p class="hero-subtitle">
-          <strong>Colombia DAO</strong>
-          <span class="sep">·</span>
-          <span>The People's Coin</span>
-          <span class="co-flag" role="img" aria-label="Bandera de Colombia"></span>
-        </p>
+          <p class="hero-subtitle">
+            <strong>Colombia DAO</strong>
+            <span class="sep">·</span>
+            <span>The People's Coin</span>
+            <span class="co-flag" role="img" aria-label="Bandera de Colombia"></span>
+          </p>
 
-        <p class="hero-desc">
-          El primer memecoin de Colombia en World Chain.
-          Una comunidad descentralizada construyendo el futuro de las finanzas para el pueblo.
-        </p>
+          <p class="hero-desc">
+            El primer memecoin de Colombia en World Chain — un movimiento descentralizado
+            construyendo el futuro de las finanzas para el pueblo. 🦋
+          </p>
 
-        <div class="hero-cta">
-          <a class="btn btn-primary"
-             href="https://world.org/mini-app?app_id=app_e5ba7c3061400e361f98ce44d8b1b9c4&path=/token/0x82bf7aa0680d9c2d6ffa77b995e2092fe68d308a"
-             target="_blank" rel="noopener noreferrer">
-            Comprar en PUF
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="btn btn-uniswap"
-             href="https://app.uniswap.org/swap?outputCurrency=0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a&chain=worldchain"
-             target="_blank" rel="noopener noreferrer">
-            Comprar en Uniswap
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-        </div>
-
-        <a href="#chart" class="btn btn-ghost">Ver Chart</a>
-
-        <div class="hero-stats">
-          <div class="stat-card">
-            <p class="stat-num" id="stat-mcap">$789</p>
-            <p class="stat-label">Market Cap</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary"
+               href="https://world.org/mini-app?app_id=app_e5ba7c3061400e361f98ce44d8b1b9c4&path=/token/0x82bf7aa0680d9c2d6ffa77b995e2092fe68d308a"
+               target="_blank" rel="noopener noreferrer">
+              Comprar en PUF
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a class="btn btn-secondary"
+               href="https://www.geckoterminal.com/world-chain/pools/0xe5f1c6b95cf182b09807b73f21f622fae08dd439"
+               target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              Ver Chart
+            </a>
+            <a class="btn btn-ghost"
+               href="https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a"
+               target="_blank" rel="noopener noreferrer">
+              DexScreener
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
-          <div class="stat-card">
-            <p class="stat-num" id="stat-holders">10,179</p>
-            <p class="stat-label">Holders</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-num" id="stat-burned">220.6K</p>
-            <p class="stat-label">🔥 Quemados</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-num" id="stat-price">$0.0000079</p>
-            <p class="stat-label">Precio</p>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <p class="stat-num" id="stat-mcap">$789</p>
+              <p class="stat-label">Market Cap</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-num" id="stat-holders">10,179</p>
+              <p class="stat-label">Holders</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-num" id="stat-burned">220K</p>
+              <p class="stat-label">🔥 Quemados</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-num" id="stat-price">$0.0000079</p>
+              <p class="stat-label">Precio</p>
+            </div>
           </div>
         </div>
       </div>
@@ -528,6 +547,11 @@
             Ver en DexScreener
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
+          <a href="https://www.geckoterminal.com/world-chain/pools/0xe5f1c6b95cf182b09807b73f21f622fae08dd439"
+             target="_blank" rel="noopener noreferrer">
+            Ver en GeckoTerminal
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -558,6 +582,12 @@
           <a class="social-card" href="https://dexscreener.com/worldchain/0x82bF7aA0680D9C2D6fFa77b995e2092fE68d308a" target="_blank" rel="noopener noreferrer">
             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             <span>DexScreener</span>
+            <svg class="icon ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a class="social-card" href="https://www.geckoterminal.com/world-chain/pools/0xe5f1c6b95cf182b09807b73f21f622fae08dd439" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            <span>GeckoTerminal</span>
             <svg class="icon ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>

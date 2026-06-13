@@ -31,7 +31,7 @@ Sitio web oficial de **RCOL**, construido como sitio estático (HTML/CSS/JS puro
 2. En *Source*, selecciona **Deploy from a branch**.
 3. Elige la rama `main` y la carpeta `/ (root)`. Guarda.
 4. En 1-2 minutos el sitio quedará en:
-   `https://dhxc420.github.io/Rcol.fun/`
+   `https://rcol-fun.vercel.app/`
 
 ## 🛠️ Desarrollo local
 
