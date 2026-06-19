@@ -1,0 +1,172 @@
+/* ===================== RCOL — Landing de Mini App ===================== */
+/* Reutiliza tokens y botones de ../styles.css; aquí solo el layout de la landing. */
+
+.lp-accent { color: var(--accent, var(--emerald)); }
+
+/* ---- Header ---- */
+.lp-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(6, 10, 9, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--border);
+}
+.lp-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--muted-fg);
+  transition: color 0.2s;
+}
+.lp-back:hover { color: var(--foreground); }
+.lp-back .icon { width: 1.1rem; height: 1.1rem; }
+.lp-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+.lp-brand img { width: 30px; height: 30px; border-radius: 50%; }
+
+/* ---- Hero ---- */
+.lp-hero {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 7rem 1.25rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.lp-hero::before {
+  content: "";
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  top: -20vmax;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent, var(--emerald)) 22%, transparent), transparent 60%);
+  pointer-events: none;
+}
+.lp-hero-inner { position: relative; max-width: 44rem; }
+
+.lp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent, var(--emerald));
+  background: color-mix(in srgb, var(--accent, var(--emerald)) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--emerald)) 45%, transparent);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.lp-art {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 2rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.75rem;
+  background: radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--accent, var(--emerald)) 35%, transparent), color-mix(in srgb, var(--accent, var(--emerald)) 8%, transparent));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), var(--shadow-lg);
+  animation: lp-float 5s ease-in-out infinite;
+}
+.lp-art img { width: 6.5rem; height: 6.5rem; border-radius: 50%; }
+.lp-art .lp-emoji { font-size: 4.5rem; line-height: 1; }
+@keyframes lp-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+.lp-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+}
+.lp-tagline {
+  color: var(--muted-fg);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  line-height: 1.6;
+  max-width: 34rem;
+  margin: 0 auto 2.25rem;
+}
+
+.lp-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+.lp-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted-fg);
+}
+
+/* ---- Features ---- */
+.lp-features {
+  padding: 4rem 1.25rem 5rem;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+}
+.lp-features-grid {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 720px) { .lp-features-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.lp-feature {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  text-align: left;
+}
+.lp-feature .lp-feat-icon { font-size: 1.9rem; margin-bottom: 0.85rem; }
+.lp-feature h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.lp-feature p { color: var(--muted-fg); font-size: 0.95rem; line-height: 1.6; }
+
+/* ---- Footer ---- */
+.lp-footer {
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  color: var(--muted-fg);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+.lp-footer a { color: var(--accent, var(--emerald)); font-weight: 600; }
+
+/* Botón primario teñido con el acento de cada juego */
+.btn-accent {
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--accent, var(--emerald)) 78%, #fff 22%),
+    var(--accent, var(--emerald)));
+  color: #06120e;
+  box-shadow: 0 10px 36px color-mix(in srgb, var(--accent, var(--emerald)) 40%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-accent:hover { filter: brightness(1.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-art { animation: none; }
+}

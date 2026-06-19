@@ -1026,6 +1026,84 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   font-size: 1.05rem;
 }
 
+/* ============ JUEGOS / MINI APPS ============ */
+.games { padding: 6rem 0; background: var(--card); }
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+@media (min-width: 640px) { .games-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .games-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.game-card:hover {
+  border-color: rgba(24, 201, 138, 0.5);
+  box-shadow: var(--shadow-emerald);
+  transform: translateY(-4px);
+}
+
+.game-badge {
+  align-self: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--emerald);
+  background: var(--emerald-soft);
+  border: 1px solid rgba(24, 201, 138, 0.4);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.game-art {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: var(--radius-xl);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.25rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), var(--shadow-md);
+}
+.game-art img { width: 4.5rem; height: 4.5rem; border-radius: 50%; }
+.game-emoji { font-size: 3rem; line-height: 1; }
+.game-art-hub { background: radial-gradient(circle at 30% 25%, rgba(227, 179, 65, 0.35), rgba(227, 179, 65, 0.08)); }
+.game-art-vuela { background: radial-gradient(circle at 30% 25%, rgba(24, 201, 138, 0.35), rgba(24, 201, 138, 0.08)); }
+.game-art-flappy { background: radial-gradient(circle at 30% 25%, rgba(252, 209, 22, 0.35), rgba(252, 209, 22, 0.08)); }
+
+.game-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 0.6rem;
+}
+.game-desc {
+  color: var(--muted-fg);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+.game-cta { width: 100%; }
+.game-cta .icon { transition: transform 0.2s; }
+.game-card:hover .game-cta .icon { transform: translateX(3px); }
+
 /* ============ FOOTER ============ */
 .site-footer {
   padding: 4rem 0;

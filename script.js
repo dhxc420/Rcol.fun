@@ -204,7 +204,7 @@
       const revealEls = document.querySelectorAll(
         ".section-head, .feature, .token-card, .htb-step, .social-card, " +
           ".stat-card, .polygon-card, .chart-wrap, .distribution, " +
-          ".htb-cta, .flag-banner"
+          ".htb-cta, .flag-banner, .game-card"
       );
       revealEls.forEach((el, i) => {
         el.classList.add("is-reveal");
