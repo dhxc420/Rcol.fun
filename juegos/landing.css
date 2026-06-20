@@ -120,6 +120,17 @@
   color: var(--muted-fg);
 }
 
+/* Banner promocional del hero (imagen 16:9) */
+.lp-banner {
+  width: 100%;
+  max-width: 42rem;
+  height: auto;
+  margin: 0 auto 1.75rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--emerald)) 40%, transparent);
+  box-shadow: var(--shadow-lg), 0 0 60px color-mix(in srgb, var(--accent, var(--emerald)) 22%, transparent);
+}
+
 /* ---- Features ---- */
 .lp-features {
   padding: 4rem 1.25rem 5rem;
