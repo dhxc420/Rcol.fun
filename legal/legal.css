@@ -1,0 +1,83 @@
+/* Legal pages — shared with juegos/landing.css tokens */
+
+.legal-page {
+  min-height: 100svh;
+  padding: 6rem 1.25rem 3rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.legal-page h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.legal-meta {
+  font-size: 0.8rem;
+  color: var(--muted-fg);
+  margin-bottom: 1.25rem;
+}
+
+.legal-intro {
+  color: var(--muted-fg);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.legal-section {
+  margin-bottom: 1.75rem;
+}
+
+.legal-section h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent, var(--emerald));
+  margin-bottom: 0.5rem;
+}
+
+.legal-section p {
+  color: var(--muted-fg);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 0.65rem;
+}
+
+.legal-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.legal-footer a {
+  color: var(--accent, var(--emerald));
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+.legal-lang {
+  display: inline-flex;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+.legal-lang button {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted-fg);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.legal-lang button.is-active {
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--accent, var(--emerald)) 55%, transparent);
+  background: color-mix(in srgb, var(--accent, var(--emerald)) 12%, transparent);
+}
+
+.lp-header .legal-lang { margin-left: 0; }

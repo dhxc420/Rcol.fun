@@ -166,6 +166,7 @@
   border-top: 1px solid var(--border);
 }
 .lp-footer a { color: var(--accent, var(--emerald)); font-weight: 600; }
+.lp-legal-links { display: inline-block; margin-top: 0.65rem; font-size: 0.85rem; }
 
 /* Botón primario teñido con el acento de cada juego */
 .btn-accent {
