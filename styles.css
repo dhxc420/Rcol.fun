@@ -1086,6 +1086,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .game-art-hub { background: radial-gradient(circle at 30% 25%, rgba(227, 179, 65, 0.35), rgba(227, 179, 65, 0.08)); }
 .game-art-vuela { background: radial-gradient(circle at 30% 25%, rgba(24, 201, 138, 0.35), rgba(24, 201, 138, 0.08)); }
 .game-art-flappy { background: radial-gradient(circle at 30% 25%, rgba(252, 209, 22, 0.35), rgba(252, 209, 22, 0.08)); }
+.game-art-runner { background: radial-gradient(circle at 30% 25%, rgba(0, 255, 213, 0.38), rgba(139, 92, 246, 0.12)); }
 
 .game-title {
   font-size: 1.25rem;

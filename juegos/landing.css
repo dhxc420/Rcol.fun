@@ -179,6 +179,52 @@
 }
 .btn-accent:hover { filter: brightness(1.08); }
 
+/* World Runner hero art */
+.lp-art-runner {
+  position: relative;
+  width: min(100%, 28rem);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(0, 255, 213, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 213, 0.08) 1px, transparent 1px),
+    linear-gradient(145deg, #0b1026 0%, #1a0a3e 55%, #030812 100%);
+  background-size: 28px 28px, 28px 28px, auto;
+  border: 1px solid color-mix(in srgb, var(--accent, #00ffd5) 40%, transparent);
+  box-shadow:
+    0 0 48px color-mix(in srgb, var(--accent, #00ffd5) 25%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.lp-art-runner-star {
+  position: absolute;
+  top: 18%;
+  right: 16%;
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 12px #ffe566);
+  animation: lp-runner-pulse 1.2s ease-in-out infinite;
+}
+.lp-art-runner-butterfly {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  filter: drop-shadow(0 0 16px var(--accent, #00ffd5));
+  animation: lp-runner-float 2.8s ease-in-out infinite;
+}
+@keyframes lp-runner-float {
+  0%, 100% { transform: translate(-50%, -52%); }
+  50% { transform: translate(-50%, -58%); }
+}
+@keyframes lp-runner-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .lp-art { animation: none; }
+  .lp-art-runner-star,
+  .lp-art-runner-butterfly { animation: none; }
 }
